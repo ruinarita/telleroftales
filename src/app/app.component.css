@@ -1,0 +1,63 @@
+.entour {
+    background-color: #d5d5d5;
+    padding: 15px;
+}
+
+.main {
+    margin: 2rem;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.character {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width: 166px;
+    align-items: center;
+    justify-content: center;
+}
+
+.prenom {
+    background-color: #e0e0e0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: lowercase;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+}
+
+.photo img { 
+    width: 165px; 
+    border: 5px solid #e0e0e0;
+}
+
+.status {
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.titre {
+    background: #ebebebb0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-size: 27px;
+    color: #949a6b;
+}
+
+.branche {
+    font-size: 9px;
+    letter-spacing: 1px;
+}

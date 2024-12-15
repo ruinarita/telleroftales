@@ -6,7 +6,46 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #e0e0e0;
   }
 </style>
 
-teller of test
+<div class="main">
+
+  <div class="entour">
+    <div class="titre">faceclaim manon</div>
+
+    <div class="list">
+      <div class="characters" *ngFor="let perso of persoManon">
+        <div class="character">
+          <div class="prenom">{{ perso.name }} <br>
+            <div class="status">personnage {{ perso.statut }}</div> 
+            <div class="branche">{{ perso.branche }}</div>
+          </div>
+          <div class="photo"> <img [src]="perso.illu"
+            [ngStyle]="{ 'filter': perso.statut !== 'actif' ? 'grayscale(1)' : 'grayscale(0)' }"> </div>
+        </div>
+      </div>
+
+    </div>
+
+<br><br><br>
+    <div class="titre">faceclaim raphaelle</div>
+
+    <div class="list">
+      <div class="characters" *ngFor="let perso of persoRaph">
+        <div class="character">
+          <div class="prenom">{{ perso.name }} <br>
+            <div class="status">personnage {{ perso.statut }}</div>
+            <div class="branche">{{ perso.branche }}</div>
+          </div>
+          <div class="photo"> <img [src]="perso.illu"
+            [ngStyle]="{ 'filter': perso.statut !== 'actif' ? 'grayscale(1)' : 'grayscale(0)' }"> </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
