@@ -11,41 +11,118 @@
 </style>
 
 <div class="main">
-
-  <div class="entour">
-    <div class="titre">faceclaim manon</div>
-
-    <div class="list">
-      <div class="characters" *ngFor="let perso of persoManon">
-        <div class="character">
-          <div class="prenom">{{ perso.name }} <br>
-            <div class="status">personnage {{ perso.statut }}</div> 
-            <div class="branche">{{ perso.branche }}</div>
-          </div>
-          <div class="photo"> <img [src]="perso.illu"
-            [ngStyle]="{ 'filter': perso.statut !== 'actif' ? 'grayscale(1)' : 'grayscale(0)' }"> </div>
-        </div>
-      </div>
-
+  <div class="header">
+    <div class="title-section">
+      <div class="subtitle">When Gears Turn Against the Crown</div>
+      <div class="title">Copper Horizons</div>
     </div>
-
-<br><br><br>
-    <div class="titre">faceclaim raphaelle</div>
-
-    <div class="list">
-      <div class="characters" *ngFor="let perso of persoRaph">
-        <div class="character">
-          <div class="prenom">{{ perso.name }} <br>
-            <div class="status">personnage {{ perso.statut }}</div>
-            <div class="branche">{{ perso.branche }}</div>
-          </div>
-          <div class="photo"> <img [src]="perso.illu"
-            [ngStyle]="{ 'filter': perso.statut !== 'actif' ? 'grayscale(1)' : 'grayscale(0)' }"> </div>
-        </div>
-      </div>
-
+    <div (click)="goToHome()" style="cursor: pointer;">
+      <span class="material-symbols-outlined">home</span>
     </div>
-
   </div>
 
+  <div class="sub-section" *ngIf="!isContextRoute()">
+
+    <div class="sub-right">
+      <div class="vignette" (click)="showMore('world')">
+        <h1>MONDE</h1>
+        <h2>Lorem ipsum dolores a steampunk fantasy roleplaying game set in a world.</h2>
+      </div>
+
+      <div class="vignette" (click)="showMore('character')">
+        <h1>PERSONNAGES</h1>
+        <h2>Lorem ipsum dolores a steampunk fantasy roleplaying game set in a world.</h2>
+      </div>
+
+      <div class="vignette" (click)="showMore('thread')">
+        <h1>THREADS</h1>
+        <h2>Lorem ipsum dolores a steampunk fantasy roleplaying game set in a world.</h2>
+      </div>
+    </div>
+
+    <div class="sub-left">  
+      <div class="feature" *ngIf="isWorld">
+        <div class="feature-title">
+          <img src="https://i.pinimg.com/736x/41/7c/76/417c769589d33e1fd25e293d38318563.jpg"> 
+          worldbuilding
+        </div>
+  
+        <div class="feature-item">
+          <div class="f-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <span class="more" (click)="goToContext()"> EN SAVOIR PLUS</span>
+          </div>
+          <div class="f-img"><img src="https://images2.imgbox.com/3b/7a/y0UuM66q_o.jpg"></div>
+        </div>
+      </div>
+
+      <div *ngIf="isCharacter">
+        <div class="feature-title">
+          <img src="https://i.pinimg.com/736x/b3/eb/59/b3eb59727305b7e4a72ba432244c17a7.jpg"> 
+          personnages
+        </div>
+
+        <div class="feature-char">
+          <div class="char-item" *ngFor="let chara of charac">
+            <div class="char-img" [ngStyle]="{
+              'width': chara.isBack ? '100px' : '100%',
+              'height': chara.isBack ? '100px' : '355px'
+            }">
+              <img [src]="chara.illu" [ngStyle]="{
+                'filter': chara.statut === 'inactif' ? 'grayscale(1)' : 'none',
+                 'border-radius': chara.isBack ? '10px' : '0px'
+              }">
+            </div>
+            <div class="char-desc">
+              <div *ngIf="chara.isFront">
+                <div class="char-role">Personnage {{ chara.statut }}</div>
+                <div class="char-name">{{ chara.name }}</div>
+                <div class="char-desc">{{ chara.desc }}</div>
+              </div>
+              <div *ngIf="chara.isBack">
+                <div>AGE : {{ chara.age }}</div>
+                <div>LIEU DE NAISSANCE : {{ chara.naissance }}</div>
+                <div>TAILLE : {{ chara.taille }}</div>
+                <div>STATUT MARIAL : {{ chara.statutMarial }}</div>
+                <div>ORIENTATION : {{ chara.orientation }}</div>
+                <div>CLASSE SOCIALE : {{ chara.classe }}</div>
+                <div>SANTÉ : {{ chara.sante }}</div>
+                <div>CARACTERE : {{ chara.caractere }}</div>
+                <div>EMPLOI : {{ chara.emploi }}</div>
+                <div>FAMILLE : {{ chara.famille }}</div>
+                <div>AUTRE : {{ chara.autre }}</div>
+              </div>
+              <div class="char-more" (click)="displayInfo(chara)">EN SAVOIR PLUS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="isThread">
+        <div class="feature-title">
+          <img src="https://i.pinimg.com/736x/bb/78/0a/bb780a456804a2d9aeb849b06c17a867.jpg"> 
+          table des matières
+        </div>
+
+        <div class="rps-main">
+          <div class="rps-item" *ngFor="let rps of rpsList">
+            <div class="rps-chars">
+              <img [src]="rps.illu" style="margin-right: 10px;">
+              <img [src]="rps.illud">
+            </div>
+            <div class="rps-title">{{ rps.title }}</div>
+            <div class="char-role">{{ rps.duo }}</div>
+            <div class="rps-desc">{{ rps.desc }}</div>
+            <div class="char-more" (click)="goToEcriture(rps)">LIRE LA SUITE</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+        
+  </div>
+
+  <router-outlet></router-outlet>
+
 </div>
+

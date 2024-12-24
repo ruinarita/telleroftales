@@ -1,0 +1,64 @@
+[
+    {
+      "id": 1,
+      "title": "Santa tell me",
+      "duo": "Nori & Rui",
+      "rps": [
+        {
+          "id": 1,
+          "author": "Rui",
+          "text": "lorem ipsum de rui",
+          "illu": "https://images2.imgbox.com/cf/f3/jQXEt4ka_o.png"
+        },
+        {
+          "id": 2,
+          "author": "Nori",
+          "text": "lorem ipsum de nori",
+          "illu": "https://images2.imgbox.com/16/4d/zauLPDoX_o.png"
+        },
+        {
+          "id": 3,
+          "author": "Rui",
+          "text": "lorem ipsum de rui 2",
+          "illu": "https://images2.imgbox.com/cf/f3/jQXEt4ka_o.png"
+        },
+        {
+          "id": 4,
+          "author": "Nori",
+          "text": "lorem ipsum de nori 2",
+          "illu": "https://images2.imgbox.com/16/4d/zauLPDoX_o.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "We cant be friends",
+      "duo": "Rengoku & Natsuo",
+      "rps": [
+        {
+          "id": 1,
+          "author": "Rengoku",
+          "text": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <br> <blockquote>— sunt in culpa qui officia</blockquote> deserunt mollit anim id est laborum. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "illu": "https://images2.imgbox.com/30/d9/MPJoeuBn_o.png"
+        },
+        {
+          "id": 2,
+          "author": "Natsuo",
+          "text": "lorem ipsum de Natsuo",
+          "illu": "https://images2.imgbox.com/3d/74/sIHpy3Fx_o.png"
+        },
+        {
+          "id": 3,
+          "author": "Rengoku",
+          "text": "lorem ipsum de Rengoku 2",
+          "illu": "https://images2.imgbox.com/30/d9/MPJoeuBn_o.png"
+        },
+        {
+          "id": 4,
+          "author": "Natsuo",
+          "text": "lorem ipsum de Natsuo 2",
+          "illu": "https://images2.imgbox.com/3d/74/sIHpy3Fx_o.png"
+        }
+      ]
+    }
+]

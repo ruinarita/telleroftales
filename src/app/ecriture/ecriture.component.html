@@ -1,0 +1,14 @@
+<div class="sub-section">
+    <div *ngIf="displayedRp">
+        <div class="rps-title">{{ displayedRp.title }}</div>
+        <div class="char-role">{{ displayedRp.duo }}</div>
+
+        <div class="rps" *ngFor="let rp of displayedRp.rps">
+            <div class="rps-container">
+                <img [src]="rp.illu" class="rps-img">
+                <div class="rps-content" [innerHTML]="rp.text"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
